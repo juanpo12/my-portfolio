@@ -1,12 +1,12 @@
 'use client'
 
-import {Navbar, Link, NavbarContent, NavbarItem, NavbarBrand } from "@nextui-org/react"
+import {Navbar as NavbarNext, Link, NavbarContent, NavbarItem, NavbarBrand } from "@nextui-org/react"
 import Image from "next/image"
 
-const NavbarOf = () => {
+const Navbar = () => {
     
     return(
-        <Navbar maxWidth="full" className="border-b-2 border-blue-500 border-opacity-20 rounded-sm ">
+        <NavbarNext maxWidth="full" className="border-b-2 border-blue-500 border-opacity-20 rounded-sm ">
             <NavbarBrand className="hidden md:flex">
                 <Image src="/logo.png" width={100} height={50} alt="logo" />
                 <p className="font-bold text-inherit hidden md:block font-mono">Juan José Diaz</p>
@@ -34,8 +34,8 @@ const NavbarOf = () => {
             </NavbarItem>
             </NavbarContent>
             <NavbarContent className="hidden md:block justify-end"/>
-      </Navbar>
+      </NavbarNext>
     )
 }
 
-export default NavbarOf
+export default Navbar
