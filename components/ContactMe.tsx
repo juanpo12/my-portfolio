@@ -23,13 +23,7 @@ const ContactMe = () => {
     return !validateEmail(form.email);
   }, [form.email, validateEmail]);
 
-  const handleChange = useCallback(
-    (e : React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      const { name, value } = e.target;
-      setForm((prevForm) => ({ ...prevForm, [name]: value }));
-    },
-    [setForm]
-  );
+
 
   const handleBlurEmail = useCallback(() => {
     const emailValid = validateEmail(form.email);
@@ -96,7 +90,8 @@ const ContactMe = () => {
             value={form.name}
             size={"md"}
             className="w-2/3 bg-gray-700 rounded-lg"
-            onChange={handleChange}
+            onChange={e => setForm({ ...form, name: e.target.value })}
+            onBlur={handleBlurEmail}
           ></Input>
           <Input
             label="Email"
@@ -112,7 +107,7 @@ const ContactMe = () => {
             }
             errorMessage={isInvalid && "Please enter a valid email"}
             className="w-2/3 bg-gray-700 rounded-lg"
-            onChange={handleChange}
+            onChange={e => setForm({ ...form, email: e.target.value })}
             onBlur={handleBlurEmail}
           ></Input>
 
@@ -122,7 +117,7 @@ const ContactMe = () => {
             labelPlacement="inside"
             placeholder="Enter your message"
             className="max-w-xs"
-            onChange={handleChange}
+            onChange={e => setForm({ ...form, message: e.target.value })}
             value={form.message}
           />
 
