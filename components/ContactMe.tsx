@@ -24,7 +24,7 @@ const ContactMe = () => {
 		return !validateEmail(form.email)
 	}, [form.email])
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const emailValid = validateEmail(form.email);
 
@@ -33,7 +33,7 @@ const ContactMe = () => {
           return;
         }
 
-        fetch('/api', {
+        await fetch('/api', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
