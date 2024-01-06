@@ -8,7 +8,7 @@ const Profile = () => {
             <div className="w-full flex justify-center items-center h-screen">
                 <div className="flex flex-col justify-center items-center p-3 rounded-lg h-[70%] w-2/3">
                         <span className="flex justify-center">
-                            <h3 className="relative w-[max-content] text-center font-mono text-4xl
+                            <h3 className="relative mt-10 md:mt-0 py-1 w-[max-content] text-center font-mono text-4xl
                                 before:absolute before:inset-0 before:animate-typewriter
                                 before:bg-black
                                 after:absolute after:inset-0 after:w-[0.125em] after:animate-caret

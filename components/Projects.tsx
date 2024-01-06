@@ -15,21 +15,21 @@ type Project = {
 const Projects = () => {
     const [projects, setProject] = useState<Project[]>([
         {
-            title: "PI Countries",
+            title: "Alma Canabica",
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique asperiores temporibus expedita nostrum eius commodi, deleniti cum voluptate minus sit ratione eum beatae tenetur, cumque adipisci rem ipsam natus saepe.',
             image: "/alma.png",
             deployUrl: "project1.com",
-            repoUrl: "project1.com"
+            repoUrl: "https://github.com/QuickCodeFusion/Alma-Cannabica"
         },
         {
             title: "Discount Dash",
             description: "Description 1",
-            image: "/alma.png",
-            deployUrl: "project1.com",
-            repoUrl: "project1.com"
+            image: "/discountDash.png",
+            deployUrl: "https://discountdash.vercel.app/",
+            repoUrl: "https://github.com/UFCampos/Discount-Dash"
         },
         {
-            title: "Alma Canabica",
+            title: "PI Countries",
             description: "Description 1",
             image: "/alma.png",
             deployUrl: "project1.com",
