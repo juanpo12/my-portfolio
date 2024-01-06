@@ -1,3 +1,4 @@
+'use client';
 import { Button, Input, Textarea } from "@nextui-org/react";
 import React, { useState, useCallback } from "react";
 
