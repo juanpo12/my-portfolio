@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <>
       <Profile/>
-      <Skills/>
       <Projects/>
+      <Skills/>
       <ContactMe/>
       <Footer/>
     </>
