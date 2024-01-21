@@ -1,5 +1,4 @@
 'use client'
-
 import {Button, Input, Textarea} from "@nextui-org/react";
 import React, { useState } from "react"
 
@@ -53,7 +52,7 @@ const ContactMe = () => {
     }
     
     return(
-        <form className="w-full h-[80vh] flex justify-center
+        <form className="w-full p-5 flex justify-center
         items-center text-center" 
         onSubmit={handleSubmit}
         >
@@ -61,8 +60,8 @@ const ContactMe = () => {
                 <h1 className="text-3xl font-mono">Contact me</h1>
                     <div className="flex flex-col justify-center items-center gap-4 p-5 m-5 h-full">
 
-                        <Input label="Your name" value={form.name} size={'md'} className="w-2/3 bg-gray-700 rounded-lg" onChange={(e) => setForm({...form, name: e.target.value})}></Input>
-                        <Input label="Email" size={'md'} value={form.email} isInvalid={isInvalid} color={isInvalid ? 'danger' : form.email === '' ? 'default' : 'success'} errorMessage={isInvalid && 'Please enter a valid email'}  className="w-2/3 bg-gray-700 rounded-lg" onChange={(e) => setForm({...form, email: e.target.value})}></Input>
+                        <Input label="Your name" value={form.name} size={'md'} className=" bg-gray-700 rounded-lg" onChange={(e) => setForm({...form, name: e.target.value})}></Input>
+                        <Input label="Email" size={'md'} value={form.email} isInvalid={isInvalid} color={isInvalid ? 'danger' : form.email === '' ? 'default' : 'success'} errorMessage={isInvalid && 'Please enter a valid email'}  className=" bg-gray-700 rounded-lg" onChange={(e) => setForm({...form, email: e.target.value})}></Input>
 
                         <Textarea
                             isRequired

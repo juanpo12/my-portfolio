@@ -29,7 +29,6 @@ export const POST = async (req: NextRequest) => {
             text: message + '\n\n' + email, 
           });
           
-          console.log(info);
         return NextResponse.json({ message: 'Email enviado correctamente.' });
         
     } catch (error : any) {
