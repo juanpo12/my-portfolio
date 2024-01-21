@@ -1,6 +1,8 @@
 'use client'
 
 import {Navbar as NavbarNext, Link, NavbarContent, NavbarItem, NavbarBrand } from "@nextui-org/react"
+
+import {Link as ScrollLink} from 'react-scroll'
 import Image from "next/image"
 
 const Navbar = () => {
@@ -13,23 +15,23 @@ const Navbar = () => {
             </NavbarBrand>
             <NavbarContent className="flex gap-6 text-lg" justify="center">
             <NavbarItem>
-                <Link color="foreground" className="text-white" href="#">
+                <Link as={ScrollLink}  to="#about" smooth={true} duration={600} color="foreground" className="text-white" href="#">
                 About me
                 </Link>
             </NavbarItem>
             <NavbarItem isActive>
-                <Link href="#" className="text-white" aria-current="page">
-                Skills
+                <Link as={ScrollLink}  to="#projects" smooth={true} duration={600} color="foreground" className="text-white" href="#projects">
+                    Works
                 </Link>
             </NavbarItem>
             <NavbarItem>
-                <Link color="foreground" className="text-white" href="#">
-                Works
+                <Link as={ScrollLink}  to="#skills" smooth={true} duration={600} href="#" className="text-white" aria-current="page">
+                    Skills
                 </Link>
             </NavbarItem>
             <NavbarItem>
-                <Link color="foreground" className="text-white" href="#">
-                Contact me
+                <Link as={ScrollLink}  to="#contact" smooth={true} duration={600} color="foreground" className="text-white" href="#">
+                    Contact me
                 </Link>
             </NavbarItem>
             </NavbarContent>

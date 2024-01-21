@@ -1,15 +1,25 @@
+'use client'
 import Profile from '@/components/Profile'
 import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
 import ContactMe from '@/components/ContactMe'
 import Footer from '@/components/Footer'
+import { Element } from 'react-scroll'
 export default function Home() {
   return (
     <>
-      <Profile/>
-      <Projects/>
+      <Element name="#about">
+        <Profile/>
+      </Element>
+      <Element name="#projects">
+        <Projects/>
+      </Element>
+      <Element name="#skills">
       <Skills/>
-      <ContactMe/>
+      </Element>
+      <Element name="#contact">
+        <ContactMe/>
+      </Element>
       <Footer/>
     </>
   )
