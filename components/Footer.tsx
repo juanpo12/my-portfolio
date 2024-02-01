@@ -9,7 +9,7 @@ const Footer = () => {
     return(
         <footer className="md:grid grid-cols-3 justify-center  items-center bg-gray-950 text-white text-center  py-4">
             <p className="flex w-full order-2 justify-center text-center  align-middle">© 2024 Juan José Diaz. All rights reserved.</p>
-            <div className="sm:flex justify-end order-last   gap-4 ">
+            <div className="flex justify-center sm:justify-end order-last gap-4  ">
                 <Link className="w-fit" as={NextLink} href={"https://github.com/juanpo12"}>
                     <Image as={NextImage} src='/github(1).png' alt={"Github"} width={40} height={40}></Image>
                 </Link>
