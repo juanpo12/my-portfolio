@@ -1,11 +1,35 @@
 'use client'
-
 import {Navbar as NavbarNext, Link, NavbarContent, NavbarItem, NavbarBrand } from "@nextui-org/react"
-
 import {Link as ScrollLink} from 'react-scroll'
 import Image from "next/image"
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+    
+    const [currentSection, setCurrentSection] = useState<string | null>(null);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        const scrolledSections = document.querySelectorAll('[data-spy="section"]');
+        let current = null;
+  
+        scrolledSections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            current = section.id;
+          }
+        });
+  
+        setCurrentSection(current);
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+      handleScroll();
+  
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
     
     return(
         <NavbarNext maxWidth="full"  className="border-b-2 border-blue-500 border-opacity-20 rounded-sm bg- ">
@@ -15,12 +39,12 @@ const Navbar = () => {
             </NavbarBrand>
             <NavbarContent className="flex gap-6 text-lg" justify="center">
             <NavbarItem>
-                <Link as={ScrollLink}  to="#about" smooth={true} duration={600} color="foreground" className="text-white" href="#">
+                <Link as={ScrollLink}  to="#about" smooth={true} duration={600} color="foreground" className="text-white " href="#">
                 About me
                 </Link>
             </NavbarItem>
-            <NavbarItem isActive>
-                <Link as={ScrollLink}  to="#projects" smooth={true} duration={600} color="foreground" className="text-white" href="#projects">
+            <NavbarItem>
+                <Link as={ScrollLink} id="projects" to="#projects" smooth={true} duration={600} color="foreground" className={currentSection === "projects" ? "text-blue-400" : "text-white"} href="#projects">
                     Works
                 </Link>
             </NavbarItem>
