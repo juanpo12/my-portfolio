@@ -5,6 +5,7 @@ import Skills from '@/components/Skills'
 import ContactMe from '@/components/ContactMe'
 import Footer from '@/components/Footer'
 import { Element } from 'react-scroll'
+import DownloadCv from '@/components/DownloadCv'
 export default function Home() {
   return (
     <>
@@ -20,6 +21,7 @@ export default function Home() {
       <Element name="#contact">
         <ContactMe/>
       </Element>
+      <DownloadCv/>
       <Footer/>
     </>
   )
