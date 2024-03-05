@@ -15,7 +15,7 @@ const Profile = () => {
                                 after:bg-white">Hello there 👋</h3>
                         </span>
                     <div className="flex flex-col justify-center items-center  gap-10">
-                            <Image as={NextImage} alt="profile" src="/sinFondo.jpg" className="rounded-full shadow-2xl size-4/4 " width={300} height={300}></Image>
+                            <Image as={NextImage} alt="profile" src="/sinFondo.jpg" className="rounded-full shadow-sm mt-4 shadow-breath size-4/4 " width={300} height={300}></Image>
                         <div className="flex flex-col justify-center text-center">
                             <h1 className="text-2xl font-mono">Juan José Diaz</h1>
                             <h2 className=" font-mono text-blue-400">FullStack Developer</h2>
