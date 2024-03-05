@@ -32,9 +32,7 @@ export const POST = async (req: NextRequest) => {
         return NextResponse.json({ message: 'Email enviado correctamente.', info} );
         
     } catch (error : any) {
+        console.log(error)
         return NextResponse.json({ error: error.message });
     }
-
-
-
 }
