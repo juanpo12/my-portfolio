@@ -1,5 +1,5 @@
 'use client'
-import { Accordion, AccordionItem, Button, Image, Link } from "@nextui-org/react"
+import { Button, Image, Link } from "@nextui-org/react"
 import NextLink from "next/link"
 import NextImage from "next/image"
 import { useState } from "react"
