@@ -16,15 +16,15 @@ export const POST = async (req: NextRequest) => {
             port: 587,
             secure: false,
             auth: {
-              user: 'juanjoc2000@hotmail.com',
+              user: 'juanjosediazarmada@outlook.com',
               pass: PASSWORD,
             },
           });
           
 
           const info = await transporter.sendMail({
-            from: `"${name}" <juanjoc2000@hotmail.com>`, 
-            to: 'juanjoc2000@hotmail.com', 
+            from: `"${name}" <juanjosediazarmada@outlook.com>`, 
+            to: 'juanjosediazarmada@outlook.com', 
             subject: "Portfolio Contact Form", 
             text: message + '\n\n' + email, 
           });
