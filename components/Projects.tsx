@@ -46,7 +46,7 @@ const Projects = () => {
 
     return(
         <div id="projects" className="md:grid flex flex-col md:grid-row-3 justify-center text-center gap-6 mt-6  w-full p-5" >
-            <h1 className="text-3xl font-mono">My Work</h1>
+            <h1 className="text-3xl font-mono">Some of my works</h1>
             <div className="flex flex-col md:flex-row md:flex-wrap justify-center gap-4">
                 {
                     projects.map((project) => (
