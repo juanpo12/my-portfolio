@@ -16,10 +16,17 @@ const Projects = () => {
     const [projects, setProject] = useState<Project[]>([
         {
             title: "Alma Canabica",
-            description: 'description 1',
+            description: 'Cannabis Soul seeks to assist people with medicinal products that aid in achieving better health in a more natural way.',
             image: "/alma.png",
-            deployUrl: "https://alma-cannabica-1b86qh0y9-juans-projects-ff191d93.vercel.app/",
+            deployUrl: "https://alma-cannabica-git-fixed-juans-projects-ff191d93.vercel.app/",
             repoUrl: "https://github.com/QuickCodeFusion/Alma-Cannabica"
+        },
+        {
+            title: "ONG Colibríes",
+            description: "This project represents an inspiring vision of a cryptocurrency dedicated to fostering prosperity and collective sovereignty.",
+            image: "/ong.png",
+            deployUrl: "https://unifying.earth/",
+            repoUrl: "https://github.com/QuickCodeFusion/sumak-kawsay-web"
         },
         {
             title: "Discount Dash",
@@ -28,20 +35,13 @@ const Projects = () => {
             deployUrl: "https://discountdash.vercel.app/",
             repoUrl: "https://github.com/UFCampos/Discount-Dash"
         },
-        {
-            title: "Cripto Currencies",
-            description: "Description 1",
-            image: "/sumak.png",
-            deployUrl: "project1.com",
-            repoUrl: "https://github.com/QuickCodeFusion/sumak-kawsay-web"
-        },
-        {
-            title: "Not available yet",
-            description: "NONE",
-            image: "/alma.png",
-            deployUrl: "project1.com",
-            repoUrl: "SOYELREPO.com"
-        }
+        // {
+        //     title: "Not available yet",
+        //     description: "NONE",
+        //     image: "/alma.png",
+        //     deployUrl: "project1.com",
+        //     repoUrl: "SOYELREPO.com"
+        // }
     ])
 
     return(
@@ -52,7 +52,7 @@ const Projects = () => {
                     projects.map((project) => (
                         <div key={project.title} className="flex flex-col md:mb-4 items-center md:w-1/3 bg-gray-800 bg-opacity-50 rounded-3xl pt-5">
                             <div className="w-fit flex flex-col p-2 text-white">
-                                <div className="">
+                                <div className=" self-center">
                                     <Image as={NextImage} className="hover:scale-110 cursor-pointer" src={project.image} alt={project.title} width={400} height={400} />
                                 </div>
                                 <div className="p-4">

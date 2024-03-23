@@ -9,16 +9,16 @@ import DownloadCv from '@/components/DownloadCv'
 export default function Home() {
   return (
     <>
-      <Element name="#about">
+      <Element name="#about" className='p-20'>
         <Profile/>
       </Element>
-      <Element name="#projects">
+      <Element className='p-20' name="#projects">
         <Projects/>
       </Element>
-      <Element name="#skills">
+      <Element className='p-20' name="#skills">
       <Skills/>
       </Element>
-      <Element name="#contact">
+      <Element className='p-20' name="#contact">
         <ContactMe/>
       </Element>
       <DownloadCv/>
