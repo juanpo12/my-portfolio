@@ -28,13 +28,13 @@ const Projects = () => {
             deployUrl: "https://unifying.earth/",
             repoUrl: "https://github.com/QuickCodeFusion/sumak-kawsay-web"
         },
-        {
-            title: "Discount Dash",
-            description: "Discount Dash is an application that sells products nearing their expiration dates at reduced prices, helping to minimize food waste and save money. It offers a diverse range of products and encourages local shopping, providing both economic and ecological benefits.",
-            image: "/discountDash.png",
-            deployUrl: "https://discountdash.vercel.app/",
-            repoUrl: "https://github.com/UFCampos/Discount-Dash"
-        },
+        // {
+        //     title: "Discount Dash",
+        //     description: "Discount Dash is an application that sells products nearing their expiration dates at reduced prices, helping to minimize food waste and save money. It offers a diverse range of products and encourages local shopping, providing both economic and ecological benefits.",
+        //     image: "/discountDash.png",
+        //     deployUrl: "https://discountdash.vercel.app/",
+        //     repoUrl: "https://github.com/UFCampos/Discount-Dash"
+        // },
         // {
         //     title: "Not available yet",
         //     description: "NONE",
