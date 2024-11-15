@@ -10,6 +10,7 @@ type Project = {
     image: string
     deployUrl: string
     repoUrl: string
+    isPublic: boolean
 }
 
 const Projects = () => {
@@ -19,29 +20,25 @@ const Projects = () => {
             description: 'Cannabis Soul seeks to assist people with medicinal products that aid in achieving better health in a more natural way.',
             image: "/alma.png",
             deployUrl: "https://alma-cannabica-git-fixed-juans-projects-ff191d93.vercel.app/",
-            repoUrl: "https://github.com/QuickCodeFusion/Alma-Cannabica"
+            repoUrl: "https://github.com/QuickCodeFusion/Alma-Cannabica",
+            isPublic: true
         },
         {
             title: "ONG Colibríes",
             description: "This project represents an inspiring vision of a cryptocurrency dedicated to fostering prosperity and collective sovereignty.",
             image: "/ong.png",
             deployUrl: "https://unifying.earth/",
-            repoUrl: "https://github.com/QuickCodeFusion/sumak-kawsay-web"
+            repoUrl: "https://github.com/QuickCodeFusion/sumak-kawsay-web",
+            isPublic: false
         },
-        // {
-        //     title: "Discount Dash",
-        //     description: "Discount Dash is an application that sells products nearing their expiration dates at reduced prices, helping to minimize food waste and save money. It offers a diverse range of products and encourages local shopping, providing both economic and ecological benefits.",
-        //     image: "/discountDash.png",
-        //     deployUrl: "https://discountdash.vercel.app/",
-        //     repoUrl: "https://github.com/UFCampos/Discount-Dash"
-        // },
-        // {
-        //     title: "Not available yet",
-        //     description: "NONE",
-        //     image: "/alma.png",
-        //     deployUrl: "project1.com",
-        //     repoUrl: "SOYELREPO.com"
-        // }
+        {
+            title: "Quick Code",
+            description: "Discount Dash is an application that sells products nearing their expiration dates at reduced prices, helping to minimize food waste and save money.",
+            image: "/qcportfolio.png",
+            deployUrl: "https://discountdash.vercel.app/",
+            repoUrl: "https://github.com/UFCampos/Discount-Dash",
+            isPublic: true
+        }
     ])
 
     return(
@@ -61,7 +58,7 @@ const Projects = () => {
                                 </div>
                             </div>
                             <div className="flex m-2 h-full border-gray-700 items-end  w-full">
-                                    <Button className="flex w-1/2 justify-center border-t-small border-r border-gray-700 items-center gap-3 rounded-none bg-inherit"> 
+                                    <Button isDisabled={!project.isPublic} className="flex w-1/2 justify-center border-t-small border-r border-gray-700 items-center gap-3 rounded-none bg-inherit"> 
                                         <Link target="_blank" className="flex gap-4" as={NextLink} href={project.repoUrl}>
                                             <Image as={NextImage} src='/github(3).png' alt={project.title} width={30} height={50}></Image>
                                                 <p className="text-blue-400">Repository</p>
