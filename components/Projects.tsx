@@ -11,6 +11,7 @@ type Project = {
     deployUrl: string
     repoUrl: string
     isPublic: boolean
+    isPublicDeploy: boolean
 }
 
 const Projects = () => {
@@ -21,7 +22,8 @@ const Projects = () => {
             image: "/alma.png",
             deployUrl: "https://alma-cannabica-git-fixed-juans-projects-ff191d93.vercel.app/",
             repoUrl: "https://github.com/QuickCodeFusion/Alma-Cannabica",
-            isPublic: true
+            isPublic: true,
+            isPublicDeploy: false
         },
         {
             title: "ONG Colibríes",
@@ -29,15 +31,17 @@ const Projects = () => {
             image: "/ong.png",
             deployUrl: "https://unifying.earth/",
             repoUrl: "https://github.com/QuickCodeFusion/sumak-kawsay-web",
-            isPublic: false
+            isPublic: false,
+            isPublicDeploy: true
         },
         {
             title: "Quick Code",
             description: "Discount Dash is an application that sells products nearing their expiration dates at reduced prices, helping to minimize food waste and save money.",
             image: "/qcportfolio.png",
             deployUrl: "https://discountdash.vercel.app/",
-            repoUrl: "https://github.com/UFCampos/Discount-Dash",
-            isPublic: true
+            repoUrl: "https://github.com/QuickCodeFusion/portfolio",
+            isPublic: false,
+            isPublicDeploy: false
         }
     ])
 
@@ -64,7 +68,7 @@ const Projects = () => {
                                                 <p className="text-blue-400">Repository</p>
                                         </Link>
                                     </Button>
-                                    <Button className="flex w-1/2 border-t-small border-gray-700 justify-center items-center gap-3 rounded-none bg-inherit"> 
+                                    <Button isDisabled={!project.isPublicDeploy} className="flex w-1/2 border-t-small border-gray-700 justify-center items-center gap-3 rounded-none bg-inherit"> 
                                         <Link target="_blank" className="flex gap-4" as={NextLink} href={project.deployUrl}>
                                             <Image as={NextImage} src='/web3.png' alt={project.title} width={30} height={50}></Image>
                                             <p className="text-blue-400">Deploy</p>
