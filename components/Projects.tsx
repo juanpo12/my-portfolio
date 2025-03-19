@@ -15,15 +15,15 @@ type Project = {
 }
 
 const Projects = () => {
-    const [projects, setProject] = useState<Project[]>([
+    const projects : Project[] = [
         {
-            title: "Alma Canabica",
-            description: 'Cannabis Soul seeks to assist people with medicinal products that aid in achieving better health in a more natural way.',
-            image: "/alma.png",
-            deployUrl: "https://alma-cannabica-git-fixed-juans-projects-ff191d93.vercel.app/",
-            repoUrl: "https://github.com/QuickCodeFusion/Alma-Cannabica",
+            title: "Velorio cancelado",
+            description: '"Velorio Cancelado" is a website to promote an event by the church Cristo la Solución; it is an invitation to their Holy Week event.',
+            image: "/veloriocanelado.jpg",
+            deployUrl: "https://velorio-cancelado.vercel.app/",
+            repoUrl: "https://github.com/juanpo12/velorio-cancelado",
             isPublic: true,
-            isPublicDeploy: false
+            isPublicDeploy: true
         },
         {
             title: "ONG Colibríes",
@@ -43,7 +43,7 @@ const Projects = () => {
             isPublic: false,
             isPublicDeploy: false
         }
-    ])
+    ]
 
     return(
         <div id="projects" className="md:grid flex flex-col md:grid-row-3 justify-center text-center gap-6 mt-6  w-full p-5" >
