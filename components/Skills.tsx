@@ -12,17 +12,17 @@ export function Skills() {
     {
       category: t("frontend"),
       icon: <Layout className="h-6 w-6" />,
-      items: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Vue.js", "Tailwind CSS"],
+      items: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
     },
     {
       category: t("backend"),
       icon: <Server className="h-6 w-6" />,
-      items: ["Node.js", "Express", "Python", "Django", "PHP", "Laravel"],
+      items: ["Node.js", "Express", "Python"],
     },
     {
       category: t("database"),
       icon: <Database className="h-6 w-6" />,
-      items: ["MongoDB", "MySQL", "PostgreSQL", "Firebase", "Supabase"],
+      items: ["MySQL", "PostgreSQL", "Firebase"],
     },
     {
       category: t("tools"),
