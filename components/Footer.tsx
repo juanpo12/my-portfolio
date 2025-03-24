@@ -1,28 +1,69 @@
-import { Image } from "@nextui-org/react"
-import { Link } from "@nextui-org/react"
-import NextImage from "next/image"
-import NextLink from "next/link"
+"use client"
 
+import Link from "next/link"
+import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
-const Footer = () => {
-    
-    return(
-        <footer className="md:grid grid-cols-3 justify-center  items-center bg-gray-950 text-white text-center  py-4">
-            <p className="flex w-full order-2 justify-center text-center  align-middle">© 2024 Juan José Diaz. All rights reserved.</p>
-            <div className="flex justify-center sm:justify-end order-last gap-4  ">
-                <Link className="w-fit" as={NextLink} href={"https://github.com/juanpo12"}>
-                    <Image as={NextImage} src='/github(1).png' alt={"Github"} width={40} height={40}></Image>
-                </Link>
-                <Link className="w-fit" as={NextLink} href={"https://www.linkedin.com/in/juan-diaz-dev1/"} >
-                    <Image as={NextImage} src='/linkedin.png' alt={"Linkedin"} width={40} height={40}></Image>
-                </Link>
-                <Link className="w-fit" as={NextLink} href={"https://wa.me/1126606410?text=mensaje"}>
-                    <Image as={NextImage} src='/whatsapp.png' alt={"WhatsApp"} width={40} height={40}></Image>
-                </Link>
-            </div>
-            <p className="flex w-full order-1 text-center  align-middle"></p>
-        </footer>
-        )
+export function Footer() {
+  const { t } = useLanguage()
+  const currentYear = new Date().getFullYear()
+
+  return (
+    <footer className="py-12 border-t border-border/40">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="mb-6 md:mb-0">
+            <Link href="/" className="text-2xl font-bold">
+              Juan José Díaz
+            </Link>
+            <p className="text-muted-foreground mt-2">{t("creating")}</p>
+          </div>
+
+          <div className="flex space-x-4">
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-background/80 border border-border hover:text-primary hover:border-primary transition-colors"
+              aria-label="GitHub"
+            >
+              <Github className="h-5 w-5" />
+            </a>
+            <a
+              href="https://linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-background/80 border border-border hover:text-primary hover:border-primary transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="h-5 w-5" />
+            </a>
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-background/80 border border-border hover:text-primary hover:border-primary transition-colors"
+              aria-label="Twitter"
+            >
+              <Twitter className="h-5 w-5" />
+            </a>
+            <a
+              href="mailto:contact@juanjosediaz.com"
+              className="p-2 rounded-full bg-background/80 border border-border hover:text-primary hover:border-primary transition-colors"
+              aria-label="Email"
+            >
+              <Mail className="h-5 w-5" />
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-8 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground">
+          <p>
+            © {currentYear} Juan José Díaz. {t("rights")}
+          </p>
+        </div>
+      </div>
+    </footer>
+  )
 }
 
-export default Footer
