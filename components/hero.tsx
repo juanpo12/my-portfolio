@@ -23,6 +23,26 @@ export function Hero() {
     <section id="about" className="py-20 md:py-32">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="flex md:hidden justify-center"
+        >
+          <div className="relative w-64 h-64 md:w-80 md:h-80">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-primary/40 blur-xl animate-pulse" />
+            <div className="relative w-full h-full rounded-full border-2 border-primary/30 overflow-hidden">
+              <Image
+                src="/yo.jpg?height=320&width=320"
+                alt="Juan José Díaz"
+                width={320}
+                height={320}
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </motion.div>
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -63,12 +83,11 @@ export function Hero() {
             </div>
           </div>
         </motion.div>
-
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex justify-center"
+          className="hidden md:flex justify-center"
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80">
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-primary/40 blur-xl animate-pulse" />
@@ -84,6 +103,7 @@ export function Hero() {
             </div>
           </div>
         </motion.div>
+
       </div>
     </section>
   )
