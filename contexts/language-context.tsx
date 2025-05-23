@@ -95,6 +95,28 @@ const translations: Translations = {
     en: "Discount Dash is an application that sells products nearing their expiration dates at reduced prices, helping to minimize food waste and save money.",
     es: "Discount Dash es una aplicación que vende productos cerca de su fecha de caducidad a precios reducidos, ayudando a minimizar el desperdicio de alimentos y ahorrar dinero.",
   },
+
+  schedule_meeting: { en: "Schedule a Meeting", es: "Agendar una Reunión" },
+  select_date: { en: "Select a date", es: "Selecciona una fecha" },
+  complete_details: { en: "Complete your details", es: "Completa tus datos" },
+  meeting_scheduled: { en: "Meeting scheduled!", es: "¡Reunión agendada!" },
+  available_times: { en: "Available times for", es: "Horarios disponibles para" },
+  meeting_summary: { en: "Meeting summary", es: "Resumen de la reunión" },
+  full_name: { en: "Full name", es: "Nombre completo" },
+  optional_message: { en: "Message (optional)", es: "Mensaje (opcional)" },
+  project_discussion: {
+    en: "Tell me about your project or what you'd like to discuss...",
+    es: "Cuéntame sobre tu proyecto o lo que te gustaría discutir...",
+  },
+  back: { en: "Back", es: "Volver" },
+  schedule_meeting_btn: { en: "Schedule meeting", es: "Agendar reunión" },
+  scheduling: { en: "Scheduling...", es: "Agendando..." },
+  meeting_success: { en: "Meeting scheduled successfully!", es: "¡Reunión agendada exitosamente!" },
+  confirmation_email: {
+    en: "I've sent you a confirmation email with the meeting details.",
+    es: "Te he enviado un correo de confirmación con los detalles de la reunión.",
+  },
+  close: { en: "Close", es: "Cerrar" },
 }
 
 type LanguageContextType = {
@@ -140,4 +162,3 @@ export function useLanguage() {
   }
   return context
 }
-
