@@ -7,12 +7,15 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Send, Download, Mail, MapPin, Phone } from "lucide-react"
+import { Send, Download, Mail, MapPin, Phone, Calendar } from "lucide-react"
 import Image from "next/image"
 import { useLanguage } from "@/contexts/language-context"
+import CalendarModal from "./calendar-modal"
 
 export function Contact() {
   const { t } = useLanguage()
+  const [isCalendarOpen, setIsCalendarOpen] = useState(false)
+
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -120,8 +123,15 @@ export function Contact() {
                 </>
               )}
             </Button>
-            {isSubmitted && <p className="text-green-500 text-center">{t("thank_you")}</p>}
           </form>
+            <div className="text-center">
+              <p className="text-sm text-muted-foreground my-4">o</p>
+              <Button variant="outline" className="w-full" onClick={() => setIsCalendarOpen(true)}>
+                <Calendar className="mr-2 h-4 w-4" />
+                {t("schedule_meeting")}
+              </Button>
+            </div>
+            {isSubmitted && <p className="text-green-500 text-center">{t("thank_you")}</p>}
         </motion.div>
 
         <motion.div
@@ -185,6 +195,7 @@ export function Contact() {
           </div>
         </motion.div>
       </div>
+      <CalendarModal isOpen={isCalendarOpen} onClose={() => setIsCalendarOpen(false)} />
     </section>
   )
 }
