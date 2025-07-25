@@ -59,9 +59,12 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground">
-          <Script src="https://adapted-perfectly-lemming.ngrok-free.app/api/organizations/d00504ca-def6-4541-8690-9b311391e9e9/agents/e569c196-1494-4868-b271-3b142f021b1c/web/widget.js" data-agent-id="e569c196-1494-4868-b271-3b142f021b1c"
-  data-org-id="d00504ca-def6-4541-8690-9b311391e9e9"
-></Script>
+      <Script 
+        src="https://adapted-perfectly-lemming.ngrok-free.app/api/organizations/d00504ca-def6-4541-8690-9b311391e9e9/agents/e569c196-1494-4868-b271-3b142f021b1c/web/widget.js" 
+        data-agent-id="e569c196-1494-4868-b271-3b142f021b1c"
+        data-org-id="d00504ca-def6-4541-8690-9b311391e9e9"
+        async />
+          
           <p>
             © {currentYear} Juan José Díaz. {t("rights")}
           </p>
