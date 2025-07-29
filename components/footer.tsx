@@ -61,8 +61,8 @@ export function Footer() {
         <div className="mt-8 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground">
 
       <Script 
-        src="https://app.cibernova.ai/api/organizations/af839774-784b-4d68-b285-9da63dc075db/agents/546e74a4-e75e-4a23-a364-d229954b9488/web/widget.js" 
-  data-agent-id="546e74a4-e75e-4a23-a364-d229954b9488"
+  src="https://adapted-perfectly-lemming.ngrok-free.app/api/organizations/af839774-784b-4d68-b285-9da63dc075db/agents/10c00db2-1900-4dee-bd57-c4433ebc6187/web/widget.js" 
+  data-agent-id="10c00db2-1900-4dee-bd57-c4433ebc6187"
   data-org-id="af839774-784b-4d68-b285-9da63dc075db"
 
 
