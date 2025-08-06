@@ -61,8 +61,8 @@ export function Footer() {
         <div className="mt-8 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground">
 
       <Script 
-  src="https://adapted-perfectly-lemming.ngrok-free.app/api/organizations/4211cc25-c280-4e77-a403-53cd1ad74859/agents/bba8f5b9-4387-4655-a7a4-a02a3e9d0182/web/widget.js" 
-  data-agent-id="bba8f5b9-4387-4655-a7a4-a02a3e9d0182"
+  src="https://adapted-perfectly-lemming.ngrok-free.app/api/organizations/4211cc25-c280-4e77-a403-53cd1ad74859/agents/273a15f5-6e63-485e-a2f1-5ca96239342a/web/widget.js" 
+  data-agent-id="273a15f5-6e63-485e-a2f1-5ca96239342a"
   data-org-id="4211cc25-c280-4e77-a403-53cd1ad74859"
         async />
           
