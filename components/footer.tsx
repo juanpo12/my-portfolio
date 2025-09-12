@@ -65,7 +65,6 @@ export function Footer() {
           data-agent-id="5adc9748-38c3-45ff-8459-9adaed11f8a7"
           data-org-id="68c08cb7-91db-49a1-a431-579f57246f0a"
           async />
-          <script src="https://ewe-sharp-radically.ngrok-free.app/api/test-js"></script>
           <p>
             © {currentYear} Juan José Díaz. {t("rights")}
           </p>
