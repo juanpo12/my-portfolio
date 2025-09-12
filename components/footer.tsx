@@ -61,10 +61,10 @@ export function Footer() {
         <div className="mt-8 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground">
 
                 <Script 
-  src="https://ewe-sharp-radically.ngrok-free.app/api/organizations/68c08cb7-91db-49a1-a431-579f57246f0a/agents/5adc9748-38c3-45ff-8459-9adaed11f8a7/web/widget.js" 
-  data-agent-id="5adc9748-38c3-45ff-8459-9adaed11f8a7"
-  data-org-id="68c08cb7-91db-49a1-a431-579f57246f0a"
-        async />
+          src="https://ewe-sharp-radically.ngrok-free.app/api/organizations/68c08cb7-91db-49a1-a431-579f57246f0a/agents/5adc9748-38c3-45ff-8459-9adaed11f8a7/web/widget.js" 
+          data-agent-id="5adc9748-38c3-45ff-8459-9adaed11f8a7"
+          data-org-id="68c08cb7-91db-49a1-a431-579f57246f0a"
+          async />
           <p>
             © {currentYear} Juan José Díaz. {t("rights")}
           </p>
