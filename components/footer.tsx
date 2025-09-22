@@ -61,7 +61,7 @@ export function Footer() {
         <div className="mt-8 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground">
 
                 <Script 
-  src="https://ellis-aud-revenue-downloadable.trycloudflare.com/api/organizations/90b92175-f1a6-4d4a-9df6-fc75516d1d06/agents/013239b1-ceba-4012-9966-020b4806790e/web/widget.js" 
+  src="https://stockholm-novels-special-seat.trycloudflare.com/api/organizations/90b92175-f1a6-4d4a-9df6-fc75516d1d06/agents/013239b1-ceba-4012-9966-020b4806790e/web/widget.js" 
   data-agent-id="013239b1-ceba-4012-9966-020b4806790e"
   data-org-id="90b92175-f1a6-4d4a-9df6-fc75516d1d06"
 
