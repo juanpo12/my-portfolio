@@ -52,8 +52,9 @@ export async function POST(req: NextRequest) {
     const response = await calendar.events.insert({
       calendarId: "primary",
       conferenceDataVersion: 1,
+      sendUpdates: "all", // Envía invitaciones a todos los asistentes
       requestBody: {
-        summary: "Scheduled Event",
+        summary: `Reunión con ${requester.name}`,
         description: description || "No description provided",
         attendees: [
           { email: requester.email, displayName: requester.name }
