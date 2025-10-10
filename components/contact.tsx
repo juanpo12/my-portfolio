@@ -56,6 +56,8 @@ export function Contact() {
     setTimeout(() => setIsSubmitted(false), 5000)
   }
 
+  
+
   return (
     <section id="contact" className="py-20">
       <motion.div

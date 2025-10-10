@@ -8,13 +8,13 @@ export async function POST(req: NextRequest) {
     if (!date) return NextResponse.json({ error: "Missing date" }, { status: 400 })
 
     const oAuth2Client = new google.auth.OAuth2(
-      process.env.CLIENT_ID,
-      process.env.CLIENT_SECRET,
-      process.env.REDIRECT_URI
+      process.env.GOOGLE_CLIENT_ID,
+      process.env.GOOGLE_CLIENT_SECRET,
+      process.env.GOOGLE_REDIRECT_URI
     )
 
     oAuth2Client.setCredentials({
-      refresh_token: process.env.REFRESH_TOKEN,
+      refresh_token: process.env.GOOGLE_REFRESH_TOKEN,
     })
 
     const calendar = google.calendar({ version: "v3", auth: oAuth2Client })
@@ -22,19 +22,15 @@ export async function POST(req: NextRequest) {
    const startOfDay = new Date(`${date}T08:00:00-03:00`)
     const endOfDay = new Date(`${date}T20:00:00-03:00`)
 
-    console.log("Checking availability from", startOfDay.toISOString(), "to", endOfDay.toISOString())
-
     const response = await calendar.freebusy.query({
       requestBody: {
         timeMin: startOfDay.toISOString(),
         timeMax: endOfDay.toISOString(),
-        timeZone: "America/Argentina/Buenos_Aires",
-        items: [{ id: "primary" }]
-      }
+        items: [{ id: "primary" }],
+      },
     })
 
-    const busyTimes = response.data.calendars?.primary.busy || []
-    console.log("Busy blocks:", busyTimes)
+    const busyTimes = response.data.calendars?.primary?.busy || []
 
     const availableSlots: { time: string; available: boolean }[] = []
     const current = new Date(startOfDay)

@@ -59,9 +59,6 @@ export default function CalendarModal({ isOpen, onClose }: CalendarModalProps) {
 
       const data: TimeSlot[] = await response.json()
 
-      console.log("Fetched events:", data);
-      
-
       if (!response.ok) {
         throw new Error("Error fetching events")
       }
@@ -102,9 +99,6 @@ export default function CalendarModal({ isOpen, onClose }: CalendarModalProps) {
     return days
   }
 
-  console.log("este es el de afeura", selectedDate);
-  
-
   const isDateDisabled = (date: Date) => {
     const today = new Date()
     today.setHours(0, 0, 0, 0)
@@ -113,7 +107,6 @@ export default function CalendarModal({ isOpen, onClose }: CalendarModalProps) {
 
   const handleDateSelect = (date: Date) => {
     if (!isDateDisabled(date)) {
-      console.log("Selected date:", date);
       setSelectedDate(date)
     }
   }
