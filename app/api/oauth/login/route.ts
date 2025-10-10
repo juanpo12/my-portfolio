@@ -23,7 +23,8 @@ export async function GET(req: NextRequest) {
     console.log("Tokens:", tokens)
 
     // Redirigís al frontend (ej: dashboard)
-    return NextResponse.redirect("http://localhost:3000/dashboard")
+    const baseUrl = process.env.NEXTAUTH_URL || "http://localhost:3000"
+    return NextResponse.redirect(`${baseUrl}/dashboard`)
   } catch (err) {
     console.error("Error al intercambiar code por token:", err)
     return NextResponse.json({ error: "Token exchange failed" }, { status: 500 })

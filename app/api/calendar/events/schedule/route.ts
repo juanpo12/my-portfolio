@@ -21,13 +21,13 @@ export async function POST(req: NextRequest) {
 
   try {
     const oAuth2Client = new google.auth.OAuth2(
-      process.env.CLIENT_ID,
-      process.env.CLIENT_SECRET,
-      process.env.REDIRECT_URI
+      process.env.GOOGLE_CLIENT_ID,
+      process.env.GOOGLE_CLIENT_SECRET,
+      process.env.GOOGLE_REDIRECT_URI
     );
 
     oAuth2Client.setCredentials({
-      refresh_token: process.env.REFRESH_TOKEN,
+      refresh_token: process.env.GOOGLE_REFRESH_TOKEN,
     });
 
     const calendar = google.calendar({ version: "v3", auth: oAuth2Client });
@@ -48,9 +48,6 @@ export async function POST(req: NextRequest) {
       .set({ hour: hours, minute: minutes, second: 0 });
 
     const endDateTime = startDateTime.plus({ minutes: 30 });
-
-    console.log("Scheduled start:", startDateTime.toISO());
-    console.log("Scheduled end:", endDateTime.toISO());
 
     const response = await calendar.events.insert({
       calendarId: "primary",
