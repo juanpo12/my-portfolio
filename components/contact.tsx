@@ -13,7 +13,7 @@ import { useLanguage } from "@/contexts/language-context"
 import CalendarModal from "./calendar-modal"
 
 export function Contact() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
   const [isCalendarOpen, setIsCalendarOpen] = useState(false)
 
   const [formState, setFormState] = useState({
@@ -185,9 +185,9 @@ export function Contact() {
                 /> */}
               </div>
               <div className="absolute top-0 right-0 bg-background/80 backdrop-blur-sm p-4 rounded-full shadow-lg">
-              {/* descarga archivo Resume.pdf que esta en public */}
+              {/* descarga archivo según idioma: Resume.pdf (inglés) o Curriculum Juan Diaz V.pdf (español) */}
                 <Button variant="outline" size="sm" className="rounded-full" asChild>
-                  <a href="/Resume.pdf" download>
+                  <a href={language === "en" ? "/cv/Resume.pdf" : "/cv/Curriculum Juan Diaz V.pdf"} download>
                     <Download className="mr-2 h-4 w-4" />
                     {t("download_resume")}
                   </a>
