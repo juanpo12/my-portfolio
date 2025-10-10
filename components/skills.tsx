@@ -12,22 +12,22 @@ export function Skills() {
     {
       category: t("frontend"),
       icon: <Layout className="h-6 w-6" />,
-      items: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
+      items: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Framer Motion"],
     },
     {
       category: t("backend"),
       icon: <Server className="h-6 w-6" />,
-      items: ["Node.js", "Express", "Python"],
+      items: ["Node.js", "Express", "Python", "FastAPI", "REST APIs", "GraphQL"],
     },
     {
       category: t("database"),
       icon: <Database className="h-6 w-6" />,
-      items: ["MySQL", "PostgreSQL", "Firebase"],
+      items: ["MySQL", "PostgreSQL", "Firebase", "Supabase", "MongoDB", "Prisma"],
     },
     {
       category: t("tools"),
       icon: <Terminal className="h-6 w-6" />,
-      items: ["Git", "GitHub", "Docker", "AWS", "Vercel", "Netlify", "Figma"],
+      items: ["Git", "GitHub", "Docker", "AWS", "Vercel", "Netlify", "Figma", "LangChain", "AI SDK", "OpenAI", "Postman"],
     },
   ]
 
