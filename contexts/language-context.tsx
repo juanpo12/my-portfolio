@@ -40,6 +40,8 @@ const translations: Translations = {
   },
   repository: { en: "Repository", es: "Repositorio" },
   deploy: { en: "Deploy", es: "Desplegar" },
+  private_repo: { en: "Private repository", es: "Repositorio privado" },
+  private_deploy: { en: "Private deployment", es: "Despliegue privado" },
 
   // Skills
   skills_tech: { en: "Skills & Technologies", es: "Habilidades y Tecnologías" },
@@ -94,6 +96,14 @@ const translations: Translations = {
   quickcode_desc: {
     en: "Discount Dash is an application that sells products nearing their expiration dates at reduced prices, helping to minimize food waste and save money.",
     es: "Discount Dash es una aplicación que vende productos cerca de su fecha de caducidad a precios reducidos, ayudando a minimizar el desperdicio de alimentos y ahorrar dinero.",
+  },
+  saas_desc: {
+    en: "An innovative SaaS platform that democratizes AI power for businesses of all sizes. Create and manage digital employees (AI agents) without technical knowledge to automate business tasks and customer service 24/7.",
+    es: "Una plataforma SaaS innovadora que democratiza el poder de la IA para empresas de todos los tamaños. Crea y gestiona empleados digitales (agentes IA) sin conocimientos técnicos para automatizar tareas empresariales y atención al cliente 24/7.",
+  },
+  tuplaza_desc: {
+    en: "An innovative educational platform inspired by Megaprofe, designed for teachers to optimize their time and improve pedagogical materials. Uses Google Gemini AI to automatically generate high-quality educational content aligned with the official curriculum.",
+    es: "Una plataforma educativa innovadora inspirada en Megaprofe, diseñada para docentes que buscan optimizar su tiempo y mejorar sus materiales pedagógicos. Utiliza IA de Google Gemini para generar automáticamente contenido educativo de alta calidad alineado con el currículo oficial.",
   },
 
   schedule_meeting: { en: "Schedule a Meeting", es: "Agendar una Reunión" },

@@ -22,26 +22,26 @@ export function Projects() {
       isPublicDeploy: true
     },
     {
-      id: 2,
-      title: "ONG Colibríes",
-      description: t("ong_desc"),
-      image: "/ong.png?height=400&width=600",
-      tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-      repoUrl: "https://github.com/QuickCodeFusion/sumak-kawsay-web",
-      demoUrl: "https://www.unifying.earth/",
+      id: 4,
+      title: "SaaS de creación de agentes IA",
+      description: t("saas_desc"),
+      image: "/saas.png?height=400&width=600",
+      tags: ["Next.js", "TypeScript", "AI SDK", "LangChain", "Supabase"],
+      repoUrl: "#",
+      demoUrl: "https://app.cibernova.ai/auth/login",
       isPublic: false,
       isPublicDeploy: true
     },
     {
-      id: 3,
-      title: "Quick Code",
-      description: t("quickcode_desc"),
-      image: "/qcportfolio.png?height=400&width=600",
-      tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+      id: 5,
+      title: "TU PLAZA Aprendizaje",
+      description: t("tuplaza_desc"),
+      image: "/tu-plaza.png?height=400&width=600",
+      tags: ["Next.js", "TypeScript", "Google Gemini", "Supabase", "Clerk", "Stripe"],
       repoUrl: "#",
-      demoUrl: "#",
+      demoUrl: "https://tu-plaza.vercel.app/",
       isPublic: false,
-      isPublicDeploy: false
+      isPublicDeploy: true
     },
   ]
 
@@ -90,18 +90,34 @@ export function Projects() {
                 <CardDescription className="text-sm text-muted-foreground">{project.description}</CardDescription>
               </CardContent>
               <CardFooter className="flex justify-between">
-                <Button disabled={!project.isPublic} variant="outline" size="sm">
-                  <a href={project.repoUrl} className="flex flex-row" target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" />
-                    {t("repository")}
-                  </a>
-                </Button>
-                <Button disabled={!project.isPublicDeploy} variant="outline" size="sm">
-                  <a href={project.demoUrl} target="_blank" className="flex flex-row" rel="noopener noreferrer">
-                    <Globe className="mr-2 h-4 w-4" />
-                    {t("deploy")}
-                  </a>
-                </Button>
+                <div className="relative group">
+                  <Button disabled={!project.isPublic} variant="outline" size="sm">
+                    <a href={project.repoUrl} className="flex flex-row" target="_blank" rel="noopener noreferrer">
+                      <Github className="mr-2 h-4 w-4" />
+                      {t("repository")}
+                    </a>
+                  </Button>
+                  {!project.isPublic && (
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10">
+                      {t("private_repo")}
+                      <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
+                    </div>
+                  )}
+                </div>
+                <div className="relative group">
+                  <Button disabled={!project.isPublicDeploy} variant="outline" size="sm">
+                    <a href={project.demoUrl} target="_blank" className="flex flex-row" rel="noopener noreferrer">
+                      <Globe className="mr-2 h-4 w-4" />
+                      {t("deploy")}
+                    </a>
+                  </Button>
+                  {!project.isPublicDeploy && (
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10">
+                      {t("private_deploy")}
+                      <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
+                    </div>
+                  )}
+                </div>
               </CardFooter>
             </Card>
           </motion.div>
