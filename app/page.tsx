@@ -16,12 +16,12 @@ export default function Home() {
         <Skills />
         <Contact />
         <Footer />
-<Script
-  src="https://votive-profligately-jerri.ngrok-free.dev/widget.js?ngrok-skip-browser-warning=true"
-  data-agent-id="13f99761-fda6-49c7-ac59-49325cf39007"
-  data-api-url="https://votive-profligately-jerri.ngrok-free.dev"
-  strategy="afterInteractive"
-/>
+  <Script
+    src="/api/widget"
+    data-agent-id="13f99761-fda6-49c7-ac59-49325cf39007"
+    data-api-url="https://votive-profligately-jerri.ngrok-free.dev"
+    strategy="afterInteractive"
+  />
       </div>
     </main>
   )
