@@ -15,6 +15,11 @@ export default function Home() {
         <Skills />
         <Contact />
         <Footer />
+        <script
+  src="https://votive-profligately-jerri.ngrok-free.dev/widget.js"
+  data-agent-id="13f99761-fda6-49c7-ac59-49325cf39007"
+  data-api-url="https://votive-profligately-jerri.ngrok-free.dev"
+></script>
       </div>
     </main>
   )
