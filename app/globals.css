@@ -75,3 +75,20 @@
   }
 }
 
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+.bg-grid-primary {
+  background-image:
+    linear-gradient(to bottom right, hsl(var(--background)) 0%, hsl(var(--background)) 65%, hsl(var(--primary) / 0.06) 100%),
+    linear-gradient(to right, hsl(var(--primary) / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--primary) / 0.05) 1px, transparent 1px);
+  background-size: 100% 100%, 64px 64px, 64px 64px;
+}
+

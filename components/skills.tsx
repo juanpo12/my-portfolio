@@ -5,6 +5,53 @@ import { motion } from "framer-motion"
 import { Database, Layout, Server, Terminal } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 
+const DEVICON_BASE = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons"
+
+const deviconMap: Record<string, { path: string; invert?: boolean }> = {
+  "HTML5":        { path: "html5/html5-original" },
+  "CSS3":         { path: "css3/css3-original" },
+  "JavaScript":   { path: "javascript/javascript-original" },
+  "TypeScript":   { path: "typescript/typescript-original" },
+  "React":        { path: "react/react-original" },
+  "Next.js":      { path: "nextjs/nextjs-original", invert: true },
+  "Tailwind CSS": { path: "tailwindcss/tailwindcss-original" },
+  "Node.js":      { path: "nodejs/nodejs-original" },
+  "Express":      { path: "express/express-original", invert: true },
+  "Python":       { path: "python/python-original" },
+  "FastAPI":      { path: "fastapi/fastapi-original" },
+  "GraphQL":      { path: "graphql/graphql-plain" },
+  "MySQL":        { path: "mysql/mysql-original" },
+  "PostgreSQL":   { path: "postgresql/postgresql-original" },
+  "Firebase":     { path: "firebase/firebase-plain" },
+  "Supabase":     { path: "supabase/supabase-original" },
+  "MongoDB":      { path: "mongodb/mongodb-original" },
+  "Prisma":       { path: "prisma/prisma-original", invert: true },
+  "Git":          { path: "git/git-original" },
+  "GitHub":       { path: "github/github-original", invert: true },
+  "Docker":       { path: "docker/docker-original" },
+  "AWS":          { path: "amazonwebservices/amazonwebservices-original-wordmark" },
+  "Figma":        { path: "figma/figma-original" },
+  "Postman":      { path: "postman/postman-original" },
+}
+
+function SkillBadge({ skill }: { skill: string }) {
+  const icon = deviconMap[skill]
+  return (
+    <span className="flex items-center gap-1.5 px-3 py-1.5 bg-background/80 border border-border rounded-full text-sm hover:border-primary/40 transition-colors">
+      {icon && (
+        <img
+          src={`${DEVICON_BASE}/${icon.path}.svg`}
+          alt={skill}
+          width={16}
+          height={16}
+          className={icon.invert ? "dark:invert" : ""}
+        />
+      )}
+      {skill}
+    </span>
+  )
+}
+
 export function Skills() {
   const { t } = useLanguage()
 
@@ -27,7 +74,7 @@ export function Skills() {
     {
       category: t("tools"),
       icon: <Terminal className="h-6 w-6" />,
-      items: ["Git", "GitHub", "Docker", "AWS", "Vercel", "Netlify", "Figma", "LangChain", "AI SDK", "OpenAI", "Postman"],
+      items: ["Git", "GitHub", "Docker", "AWS", "Figma", "Postman", "LangChain", "AI SDK", "OpenAI"],
     },
   ]
 
@@ -60,9 +107,7 @@ export function Skills() {
             </div>
             <div className="flex flex-wrap gap-2">
               {skillGroup.items.map((skill) => (
-                <span key={skill} className="px-3 py-1 bg-background/80 border border-border rounded-full text-sm">
-                  {skill}
-                </span>
+                <SkillBadge key={skill} skill={skill} />
               ))}
             </div>
           </motion.div>
@@ -81,4 +126,3 @@ export function Skills() {
     </section>
   )
 }
-

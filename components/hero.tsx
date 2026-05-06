@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useMemo } from "react"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
@@ -10,9 +10,44 @@ export function Hero() {
   const [isMounted, setIsMounted] = useState(false)
   const { t } = useLanguage()
 
+  const roles = useMemo(() => [
+    t("fullstack"),
+    "AI Developer",
+    "SaaS Builder",
+  ], [t])
+
+  const [roleIndex, setRoleIndex] = useState(0)
+  const [displayText, setDisplayText] = useState("")
+  const [isDeleting, setIsDeleting] = useState(false)
+
   useEffect(() => {
     setIsMounted(true)
   }, [])
+
+  useEffect(() => {
+    if (!isMounted) return
+    const fullText = roles[roleIndex]
+    let timeout: NodeJS.Timeout
+
+    if (!isDeleting && displayText === fullText) {
+      timeout = setTimeout(() => setIsDeleting(true), 2000)
+    } else if (isDeleting && displayText === "") {
+      timeout = setTimeout(() => {
+        setIsDeleting(false)
+        setRoleIndex((prev) => (prev + 1) % roles.length)
+      }, 400)
+    } else if (!isDeleting) {
+      timeout = setTimeout(() => {
+        setDisplayText(fullText.slice(0, displayText.length + 1))
+      }, 80)
+    } else {
+      timeout = setTimeout(() => {
+        setDisplayText(fullText.slice(0, displayText.length - 1))
+      }, 40)
+    }
+
+    return () => clearTimeout(timeout)
+  }, [displayText, isDeleting, roleIndex, roles, isMounted])
 
   if (!isMounted) {
     return null
@@ -50,7 +85,10 @@ export function Hero() {
           <div className="space-y-2">
             <h2 className="text-2xl font-medium text-primary">{t("hello")}</h2>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">{t("im")} Juan José Díaz</h1>
-            <p className="text-xl md:text-2xl text-muted-foreground">{t("fullstack")}</p>
+            <p className="text-xl md:text-2xl text-muted-foreground h-8">
+              {displayText}
+              <span className="animate-blink text-primary">|</span>
+            </p>
           </div>
 
           <p className="text-lg text-muted-foreground">{t("hero_desc")}</p>
@@ -107,4 +145,3 @@ export function Hero() {
     </section>
   )
 }
-
