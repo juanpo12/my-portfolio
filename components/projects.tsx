@@ -12,14 +12,14 @@ export function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Velorio cancelado",
-      description: t("velorio_desc"),
-      image: "/veloriocancelado.jpg?height=400&width=600",
-      tags: ["Next.js", "Tailwind CSS", "TypeScript"],
-      repoUrl: "https://github.com/juanpo12/velorio-cancelado",
-      demoUrl: "https://www.veloriocancelado.com/",
-      isPublic: true,
-      isPublicDeploy: true
+      title: "Cristo la Solución",
+      description: t("cristo_desc"),
+      image: "/cristo-la-solucion.jpg?height=400&width=600",
+      tags: ["Next.js", "TypeScript", "Supabase", "Drizzle ORM", "Mercado Pago"],
+      repoUrl: "#",
+      demoUrl: "https://www.cristolasolucionsj.com/",
+      isPublic: false,
+      isPublicDeploy: false
     },
     {
       id: 4,

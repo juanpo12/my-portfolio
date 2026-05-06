@@ -85,9 +85,9 @@ const translations: Translations = {
   rights: { en: "All rights reserved.", es: "Todos los derechos reservados." },
 
   // Project descriptions
-  velorio_desc: {
-    en: '"Velorio Cancelado" is a website to promote an event by the church Cristo la Solución; it is an invitation to their Holy Week event.',
-    es: '"Velorio Cancelado" es un sitio web para promocionar un evento de la iglesia Cristo la Solución; es una invitación a su evento de Semana Santa.',
+  cristo_desc: {
+    en: 'Official website for Cristo la Solución church. Includes a content management system, event listings, donation integration via Mercado Pago, and a digital library.',
+    es: 'Sitio web oficial de la iglesia Cristo la Solución. Incluye un sistema de gestión de contenido, listado de eventos, integración de donaciones con Mercado Pago y una biblioteca digital.',
   },
   ong_desc: {
     en: "This project represents an inspiring vision of a cryptocurrency dedicated to fostering prosperity and collective sovereignty.",
