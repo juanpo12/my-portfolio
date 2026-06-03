@@ -23,12 +23,12 @@ export function Projects() {
     },
     {
       id: 4,
-      title: "SaaS de creación de agentes IA",
+      title: "SHADDAI",
       description: t("saas_desc"),
       image: "/saas.png?height=400&width=600",
-      tags: ["Next.js", "TypeScript", "AI SDK", "LangChain", "Supabase"],
+      tags: ["Next.js", "React 19", "Fastify", "LangChain", "Drizzle ORM", "Supabase", "Redis"],
       repoUrl: "#",
-      demoUrl: "https://app.cibernova.ai/auth/login",
+      demoUrl: "https://ai-saas-front-mu.vercel.app/",
       isPublic: false,
       isPublicDeploy: true
     },
