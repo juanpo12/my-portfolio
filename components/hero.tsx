@@ -11,9 +11,9 @@ export function Hero() {
   const { t } = useLanguage()
 
   const roles = useMemo(() => [
+    t("role_techlead"),
     t("fullstack"),
-    "AI Developer",
-    "SaaS Builder",
+    t("role_ai"),
   ], [t])
 
   const [roleIndex, setRoleIndex] = useState(0)

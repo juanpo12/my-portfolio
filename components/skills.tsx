@@ -2,7 +2,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Database, Layout, Server, Terminal } from "lucide-react"
+import { Brain, Database, Layout, Server, Smartphone, Terminal } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 
 const DEVICON_BASE = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons"
@@ -17,11 +17,16 @@ const deviconMap: Record<string, { path: string; invert?: boolean }> = {
   "Tailwind CSS": { path: "tailwindcss/tailwindcss-original" },
   "Node.js":      { path: "nodejs/nodejs-original" },
   "Express":      { path: "express/express-original", invert: true },
+  "Fastify":      { path: "fastify/fastify-original", invert: true },
   "Python":       { path: "python/python-original" },
   "FastAPI":      { path: "fastapi/fastapi-original" },
   "GraphQL":      { path: "graphql/graphql-plain" },
+  "Swift":        { path: "swift/swift-original" },
+  "SwiftUI":      { path: "swift/swift-original" },
+  "Kotlin":       { path: "kotlin/kotlin-original" },
   "MySQL":        { path: "mysql/mysql-original" },
   "PostgreSQL":   { path: "postgresql/postgresql-original" },
+  "Redis":        { path: "redis/redis-original" },
   "Firebase":     { path: "firebase/firebase-plain" },
   "Supabase":     { path: "supabase/supabase-original" },
   "MongoDB":      { path: "mongodb/mongodb-original" },
@@ -59,22 +64,32 @@ export function Skills() {
     {
       category: t("frontend"),
       icon: <Layout className="h-6 w-6" />,
-      items: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Framer Motion"],
+      items: ["TypeScript", "JavaScript", "React", "Next.js", "Redux Toolkit", "Tailwind CSS", "Radix UI", "Framer Motion"],
     },
     {
       category: t("backend"),
       icon: <Server className="h-6 w-6" />,
-      items: ["Node.js", "Express", "Python", "FastAPI", "REST APIs", "GraphQL"],
+      items: ["Node.js", "Fastify", "Express", "REST APIs", "Webhooks", "WebSockets", "Drizzle ORM"],
+    },
+    {
+      category: t("mobile"),
+      icon: <Smartphone className="h-6 w-6" />,
+      items: ["Swift", "SwiftUI", "Kotlin", "React Native", "StoreKit", "MVVM + Coordinator"],
+    },
+    {
+      category: t("ai_agents"),
+      icon: <Brain className="h-6 w-6" />,
+      items: ["OpenAI", "Anthropic", "Google AI", "Azure AI", "LangChain", "AI SDK", "RAG", "Embeddings", "Prompt Engineering"],
     },
     {
       category: t("database"),
       icon: <Database className="h-6 w-6" />,
-      items: ["MySQL", "PostgreSQL", "Firebase", "Supabase", "MongoDB", "Prisma"],
+      items: ["PostgreSQL", "Supabase", "Redis", "Firestore", "MongoDB", "Prisma"],
     },
     {
       category: t("tools"),
       icon: <Terminal className="h-6 w-6" />,
-      items: ["Git", "GitHub", "Docker", "AWS", "Figma", "Postman", "LangChain", "AI SDK", "OpenAI"],
+      items: ["Git", "GitHub", "Docker", "Inngest", "Sentry", "Winston", "k6", "Cloudflare R2", "Jira"],
     },
   ]
 

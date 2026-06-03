@@ -1,4 +1,5 @@
 import { Contact } from "@/components/contact";
+import { Experience } from "@/components/experience";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
 import { Navbar } from "@/components/navbar";
@@ -16,10 +17,10 @@ const jsonLd = {
     "https://www.linkedin.com/in/juan-diaz-dev1/",
     "https://www.instagram.com/juan.po0/",
   ],
-  jobTitle: "Full Stack Developer",
+  jobTitle: "Tech Lead · Full Stack & AI Developer",
   worksFor: {
     "@type": "Organization",
-    name: "Freelance",
+    name: "Fablestep",
   },
   address: {
     "@type": "PostalAddress",
@@ -32,11 +33,16 @@ const jsonLd = {
     "TypeScript",
     "React",
     "Node.js",
-    "Python",
-    "Supabase",
-    "AI Development",
-    "SaaS Development",
+    "Swift",
+    "SwiftUI",
+    "Kotlin",
+    "Fastify",
+    "PostgreSQL",
+    "Conversational AI",
+    "AI Agents",
+    "Multi-tenant SaaS",
     "Full Stack Development",
+    "Mobile Development",
   ],
 }
 
@@ -51,6 +57,7 @@ export default function Home() {
         <Navbar />
         <div className="container mx-auto px-4 py-8">
           <Hero />
+          <Experience />
           <Projects />
           <Skills />
           <Contact />

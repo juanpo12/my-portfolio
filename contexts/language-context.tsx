@@ -14,6 +14,7 @@ type Translations = {
 const translations: Translations = {
   // Navbar
   about: { en: "About me", es: "Sobre mí" },
+  experience: { en: "Experience", es: "Experiencia" },
   works: { en: "Works", es: "Proyectos" },
   skills: { en: "Skills", es: "Habilidades" },
   contact: { en: "Contact me", es: "Contáctame" },
@@ -22,13 +23,15 @@ const translations: Translations = {
   hello: { en: "Hello there 👋", es: "Hola 👋" },
   im: { en: "I'm", es: "Soy" },
   fullstack: { en: "FullStack Developer", es: "Desarrollador FullStack" },
+  role_techlead: { en: "Tech Lead", es: "Tech Lead" },
+  role_ai: { en: "AI & Conversational Agents Specialist", es: "Especialista en IA y Agentes Conversacionales" },
   hero_desc: {
-    en: "I create exceptional web experiences, design attractive interfaces and develop web applications with passion. Specialized in optimizing the user experience.",
-    es: "Creo experiencias web excepcionales, diseño interfaces atractivas y desarrollo aplicaciones web con pasión. Especializado en optimizar la experiencia del usuario.",
+    en: "Full Stack Developer with 3+ years building intelligent, scalable systems that blend web and native mobile with AI-driven automation. Currently Tech Lead, leading end-to-end product on iOS, Android and backend.",
+    es: "Desarrollador Full Stack con más de 3 años construyendo sistemas inteligentes y escalables que combinan web y móvil nativo con automatización impulsada por IA. Actualmente Tech Lead, liderando el producto end-to-end en iOS, Android y backend.",
   },
   tech_desc: {
-    en: "I use technologies like Firebase, TypeScript, Next.js, and Redux Toolkit. Your next web project begins here.",
-    es: "Utilizo tecnologías como Firebase, TypeScript, Next.js y Redux Toolkit. Tu próximo proyecto web comienza aquí.",
+    en: "Specialized in multi-tenant SaaS platforms, conversational agents and event-driven architectures — integrating OpenAI, Anthropic, Google and Azure in production.",
+    es: "Especializado en plataformas SaaS multi-tenant, agentes conversacionales y arquitecturas orientadas a eventos — integrando OpenAI, Anthropic, Google y Azure en producción.",
   },
   contact_me: { en: "Contact Me", es: "Contáctame" },
 
@@ -43,6 +46,58 @@ const translations: Translations = {
   private_repo: { en: "Private repository", es: "Repositorio privado" },
   private_deploy: { en: "Private deployment", es: "Despliegue privado" },
 
+  // Experience
+  experience_desc: {
+    en: "Over 3 years building and leading production systems across web, mobile and AI, in international remote teams.",
+    es: "Más de 3 años construyendo y liderando sistemas en producción entre web, móvil e IA, en equipos remotos internacionales.",
+  },
+  present: { en: "Present", es: "Actualidad" },
+  exp_role_fullstack: { en: "Full Stack Developer", es: "Desarrollador Full Stack" },
+  exp_remote_us: { en: "United States (Remote)", es: "Estados Unidos (Remoto)" },
+  exp_remote_es: { en: "Spain (Remote)", es: "España (Remoto)" },
+  exp_remote_co: { en: "Colombia (Remote)", es: "Colombia (Remoto)" },
+  exp_remote_do: { en: "Dominican Republic (Remote)", es: "República Dominicana (Remoto)" },
+  exp_fablestep_1: {
+    en: "Lead end-to-end development of Fablelingo — an AI language-learning app — on native iOS (SwiftUI), Android and backend, owning architecture and technical decisions from day one.",
+    es: "Lidero el desarrollo end-to-end de Fablelingo — app de aprendizaje de idiomas con IA — en iOS nativo (SwiftUI), Android y backend, a cargo de la arquitectura y las decisiones técnicas desde el día uno.",
+  },
+  exp_fablestep_2: {
+    en: "Built the entire backend from scratch with Fastify, TypeScript and Drizzle ORM over PostgreSQL — 27 domain modules and 35+ versioned migrations powering lessons, gamification, AI roleplay and monetization.",
+    es: "Construí todo el backend desde cero con Fastify, TypeScript y Drizzle ORM sobre PostgreSQL — 27 módulos de dominio y más de 35 migraciones versionadas que soportan lecciones, gamificación, roleplay con IA y monetización.",
+  },
+  exp_fablestep_3: {
+    en: "Designed a token & subscription monetization system with a coach commission engine, and load-tested the backend with k6 to 2,000+ concurrent users.",
+    es: "Diseñé un sistema de monetización por tokens y suscripciones con motor de comisiones para coaches, y probé el backend con k6 hasta más de 2.000 usuarios concurrentes.",
+  },
+  exp_cibernova_1: {
+    en: "Designed a multi-tenant architecture with schema isolation in PostgreSQL, supporting 50+ organizations with full data separation under load.",
+    es: "Diseñé una arquitectura multi-tenant con aislamiento por esquemas en PostgreSQL, dando soporte a más de 50 organizaciones con total separación de datos bajo carga.",
+  },
+  exp_cibernova_2: {
+    en: "Built a unified AI orchestration layer integrating OpenAI, Anthropic, Google and Azure, enabling LLM provider switching without code changes; real-time omnichannel messaging cut response times ~40%.",
+    es: "Construí una capa unificada de orquestación de IA integrando OpenAI, Anthropic, Google y Azure, permitiendo cambiar de proveedor LLM sin tocar código; la mensajería omnicanal en tiempo real redujo los tiempos de respuesta ~40%.",
+  },
+  exp_cibernova_3: {
+    en: "Developed an event-driven trigger & webhook system with Inngest workers processing 10,000+ daily events with zero message loss.",
+    es: "Desarrollé un sistema de triggers y webhooks orientado a eventos con workers de Inngest procesando más de 10.000 eventos diarios sin pérdida de mensajes.",
+  },
+  exp_vozy_1: {
+    en: "Designed and deployed AI collections agents for 3 enterprise clients, recovering ~$120,000 USD in outstanding invoices in the first quarter.",
+    es: "Diseñé y desplegué agentes de IA para cobranzas de 3 clientes enterprise, recuperando ~$120.000 USD en facturas pendientes en el primer trimestre.",
+  },
+  exp_vozy_2: {
+    en: "Built conversational agents reaching an 85%+ containment rate (queries resolved without human escalation) in production.",
+    es: "Construí agentes conversacionales con una tasa de contención del 85%+ (consultas resueltas sin escalado humano) en producción.",
+  },
+  exp_gpesports_1: {
+    en: "Built a real-time Formula 1 tournament management system with Socket.io, supporting 200+ concurrent participants.",
+    es: "Construí un sistema de gestión de torneos de Fórmula 1 en tiempo real con Socket.io, soportando más de 200 participantes simultáneos.",
+  },
+  exp_gpesports_2: {
+    en: "Developed Discord and WhatsApp bots in Node.js, plus an Electron + React desktop app for OBS broadcast management used live at 30+ esports events.",
+    es: "Desarrollé bots de Discord y WhatsApp en Node.js, más una app de escritorio con Electron + React para gestión de transmisiones OBS, usada en vivo en más de 30 eventos de esports.",
+  },
+
   // Skills
   skills_tech: { en: "Skills & Technologies", es: "Habilidades y Tecnologías" },
   skills_desc: {
@@ -51,6 +106,8 @@ const translations: Translations = {
   },
   frontend: { en: "Frontend", es: "Frontend" },
   backend: { en: "Backend", es: "Backend" },
+  mobile: { en: "Mobile", es: "Mobile" },
+  ai_agents: { en: "AI & Agents", es: "IA y Agentes" },
   database: { en: "Database", es: "Base de datos" },
   tools: { en: "Tools & Others", es: "Herramientas y Otros" },
   always_learning: {
@@ -96,6 +153,10 @@ const translations: Translations = {
   quickcode_desc: {
     en: "Discount Dash is an application that sells products nearing their expiration dates at reduced prices, helping to minimize food waste and save money.",
     es: "Discount Dash es una aplicación que vende productos cerca de su fecha de caducidad a precios reducidos, ayudando a minimizar el desperdicio de alimentos y ahorrar dinero.",
+  },
+  fablelingo_desc: {
+    en: "AI-powered language-learning app (iOS, Android & web) with conversational roleplay, gamified lessons and a coaching marketplace. As Tech Lead I built the native SwiftUI app and a Fastify backend with 27 domain modules, AI roleplay, token monetization and a coach commission engine — load-tested to 2,000+ concurrent users.",
+    es: "App de aprendizaje de idiomas con IA (iOS, Android y web) con roleplay conversacional, lecciones gamificadas y un marketplace de coaching. Como Tech Lead construí la app nativa en SwiftUI y un backend con Fastify de 27 módulos de dominio, roleplay con IA, monetización por tokens y motor de comisiones — probado con carga de más de 2.000 usuarios concurrentes.",
   },
   saas_desc: {
     en: "An innovative SaaS platform that democratizes AI power for businesses of all sizes. Create and manage digital employees (AI agents) without technical knowledge to automate business tasks and customer service 24/7.",

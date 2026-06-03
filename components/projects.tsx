@@ -11,15 +11,15 @@ export function Projects() {
 
   const projects = [
     {
-      id: 1,
-      title: "Cristo la Solución",
-      description: t("cristo_desc"),
-      image: "/cristo-la-solucion.jpg?height=400&width=600",
-      tags: ["Next.js", "TypeScript", "Supabase", "Drizzle ORM", "Mercado Pago"],
+      id: 6,
+      title: "Fablelingo",
+      description: t("fablelingo_desc"),
+      image: "/fablelingo.png?height=400&width=600",
+      tags: ["SwiftUI", "Kotlin", "Fastify", "Drizzle ORM", "PostgreSQL", "Redis", "Inngest"],
       repoUrl: "#",
-      demoUrl: "https://www.cristolasolucionsj.com/",
+      demoUrl: "#",
       isPublic: false,
-      isPublicDeploy: true
+      isPublicDeploy: false
     },
     {
       id: 4,
