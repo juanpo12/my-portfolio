@@ -89,7 +89,7 @@ export default function RootLayout({
         </ThemeProvider>
         <Script
           src="https://ai-saas-fast-production.up.railway.app/widget.js"
-          data-agent-id="861a49a6-1714-4953-b4d3-7f960d2c0e3c"
+          data-agent-id="ea150a6a-3d0e-42a7-bced-9a6728dfb948"
           data-api-url="https://ai-saas-fast-production.up.railway.app"
           strategy="afterInteractive"
         />
