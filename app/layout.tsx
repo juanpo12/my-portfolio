@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import Script from "next/script"
 import "./globals.css"
 import { LanguageProvider } from "@/contexts/language-context"
 import { ThemeProvider } from "next-themes"
@@ -86,6 +87,12 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           <LanguageProvider>{children}</LanguageProvider>
         </ThemeProvider>
+        <Script
+          src="https://ai-saas-fast-production.up.railway.app/widget.js"
+          data-agent-id="861a49a6-1714-4953-b4d3-7f960d2c0e3c"
+          data-api-url="https://ai-saas-fast-production.up.railway.app"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
