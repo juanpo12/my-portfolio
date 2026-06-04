@@ -25,7 +25,7 @@ export function Projects() {
       id: 4,
       title: "SHADDAI",
       description: t("saas_desc"),
-      image: "/saas.png?height=400&width=600",
+      image: "/shaddai.png?height=400&width=600",
       tags: ["Next.js", "React 19", "Fastify", "LangChain", "Drizzle ORM", "Supabase", "Redis"],
       repoUrl: "#",
       demoUrl: "https://ai-saas-front-mu.vercel.app/",
