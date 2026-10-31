@@ -68,6 +68,7 @@ export function Projects() {
       title: "TU PLAZA Aprendizaje",
       description: t("tuplaza_desc"),
       image: "/tu-plaza.png?height=400&width=600",
+      video: "/tuplaza-promo.mp4",
       tags: ["Next.js", "TypeScript", "Google Gemini", "Supabase", "Clerk", "Stripe"],
       demoUrl: "https://tu-plaza.vercel.app/",
     },
