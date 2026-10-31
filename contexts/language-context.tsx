@@ -43,6 +43,8 @@ const translations: Translations = {
   },
   repository: { en: "Repository", es: "Repositorio" },
   deploy: { en: "Deploy", es: "Desplegar" },
+  visit_site: { en: "Visit site", es: "Ver sitio" },
+  watch_video: { en: "Watch video", es: "Ver video" },
   private_repo: { en: "Private repository", es: "Repositorio privado" },
   private_deploy: { en: "Private deployment", es: "Despliegue privado" },
 
@@ -58,12 +60,12 @@ const translations: Translations = {
   exp_remote_co: { en: "Colombia (Remote)", es: "Colombia (Remoto)" },
   exp_remote_do: { en: "Dominican Republic (Remote)", es: "República Dominicana (Remoto)" },
   exp_fablestep_1: {
-    en: "Lead end-to-end development of Fablelingo — an AI language-learning app — on native iOS (SwiftUI), Android and backend, owning architecture and technical decisions from day one.",
-    es: "Lidero el desarrollo end-to-end de Fablelingo — app de aprendizaje de idiomas con IA — en iOS nativo (SwiftUI), Android y backend, a cargo de la arquitectura y las decisiones técnicas desde el día uno.",
+    en: "Lead end-to-end development of Fablelingo — a language-learning app with real coaches and AI-generated roleplays — on native iOS (SwiftUI), Android and backend, owning architecture and technical decisions from day one.",
+    es: "Lidero el desarrollo end-to-end de Fablelingo — app de aprendizaje de idiomas con coaches reales y roleplays generados con IA — en iOS nativo (SwiftUI), Android y backend, a cargo de la arquitectura y las decisiones técnicas desde el día uno.",
   },
   exp_fablestep_2: {
-    en: "Built the entire backend from scratch with Fastify, TypeScript and Drizzle ORM over PostgreSQL — 27 domain modules and 35+ versioned migrations powering lessons, gamification, AI roleplay and monetization.",
-    es: "Construí todo el backend desde cero con Fastify, TypeScript y Drizzle ORM sobre PostgreSQL — 27 módulos de dominio y más de 35 migraciones versionadas que soportan lecciones, gamificación, roleplay con IA y monetización.",
+    en: "Built the entire backend from scratch with Fastify, TypeScript and Drizzle ORM over PostgreSQL — 27 domain modules and 35+ versioned migrations powering lessons, gamification, AI roleplay generation and monetization.",
+    es: "Construí todo el backend desde cero con Fastify, TypeScript y Drizzle ORM sobre PostgreSQL — 27 módulos de dominio y más de 35 migraciones versionadas que soportan lecciones, gamificación, generación de roleplays con IA y monetización.",
   },
   exp_fablestep_3: {
     en: "Designed a token & subscription monetization system with a coach commission engine, and load-tested the backend with k6 to 2,000+ concurrent users.",
@@ -155,8 +157,8 @@ const translations: Translations = {
     es: "Discount Dash es una aplicación que vende productos cerca de su fecha de caducidad a precios reducidos, ayudando a minimizar el desperdicio de alimentos y ahorrar dinero.",
   },
   fablelingo_desc: {
-    en: "AI-powered language-learning app (iOS, Android & web) with conversational roleplay, gamified lessons and a coaching marketplace. As Tech Lead I built the native SwiftUI app and a Fastify backend with 27 domain modules, AI roleplay, token monetization and a coach commission engine — load-tested to 2,000+ concurrent users.",
-    es: "App de aprendizaje de idiomas con IA (iOS, Android y web) con roleplay conversacional, lecciones gamificadas y un marketplace de coaching. Como Tech Lead construí la app nativa en SwiftUI y un backend con Fastify de 27 módulos de dominio, roleplay con IA, monetización por tokens y motor de comisiones — probado con carga de más de 2.000 usuarios concurrentes.",
+    en: "Language-learning app (iOS, Android & web) with lessons from real coaches, AI-generated roleplay scenarios, gamification and paid video feedback from coaches. As Tech Lead I built the native SwiftUI app and a Fastify backend with 27 domain modules — including the AI roleplay generation pipeline, token monetization and a coach commission engine — load-tested to 2,000+ concurrent users.",
+    es: "App de aprendizaje de idiomas (iOS, Android y web) con lecciones de coaches reales, roleplays generados con IA, gamificación y video feedback pago de los coaches. Como Tech Lead construí la app nativa en SwiftUI y un backend con Fastify de 27 módulos de dominio — incluyendo el pipeline de generación de roleplays con IA, monetización por tokens y motor de comisiones para coaches — probado con carga de más de 2.000 usuarios concurrentes.",
   },
   saas_desc: {
     en: "A multi-tenant AI SaaS I built end-to-end. Teams create conversational agents with custom tools, RAG knowledge bases (OpenAI + Google embeddings, vector search) and bulk campaigns, then connect them to WhatsApp, Instagram, LinkedIn, Telegram and Twitter via Unipile — or embed them as a chat widget. Fastify v5 backend with Drizzle + Supabase + Upstash Redis, LangChain orchestrating Claude, GPT and Gemini, RBAC, platform API keys and a token/cost usage dashboard.",
